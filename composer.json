@@ -1,0 +1,54 @@
+{
+    "name": "polygonlab/facture-electronique-fr-outils",
+    "description": "Lecture des factures électroniques CII, UBL et Factur-X et contrôle des mentions obligatoires françaises.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": ["php", "facture-electronique", "facturx", "factur-x", "ubl", "cii", "en16931", "e-invoicing", "france", "tva", "zugferd"],
+    "homepage": "https://github.com/polygonlab-ai/facture-electronique-fr-outils",
+    "authors": [
+        {
+            "name": "PolygonLab",
+            "email": "contact@polygonlab.ai",
+            "homepage": "https://polygonlab.ai"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/polygonlab-ai/facture-electronique-fr-outils/issues",
+        "source": "https://github.com/polygonlab-ai/facture-electronique-fr-outils",
+        "security": "https://github.com/polygonlab-ai/facture-electronique-fr-outils/security/policy"
+    },
+    "require": {
+        "php": ">=8.2",
+        "ext-dom": "*",
+        "ext-libxml": "*",
+        "ext-zlib": "*",
+        "polygonlab/identifiants-entreprise-fr": "^0.1"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.75",
+        "phpstan/phpstan": "^2.1",
+        "phpunit/phpunit": "^11.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "PolygonLab\\FactureElectronique\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PolygonLab\\FactureElectronique\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --no-progress",
+        "style": "php-cs-fixer fix --dry-run --diff",
+        "style-corriger": "php-cs-fixer fix"
+    },
+    "config": {
+        "sort-packages": true,
+        "preferred-install": "dist"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
