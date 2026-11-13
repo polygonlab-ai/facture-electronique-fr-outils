@@ -5,6 +5,13 @@ Toutes les évolutions notables de ce dépôt sont décrites ici.
 Le format suit [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/) et le projet respecte
 le [versionnage sémantique](https://semver.org/lang/fr/).
 
+## [0.1.1] - 2026-11-14 - Correction de l'analyse statique des tests
+
+### Corrigé
+
+- `tests/ReadmeTest.php` : la présence de la sortie attendue dans le README est vérifiée avant sa lecture, ce qui
+  satisfait PHPStan 2.3 au niveau maximal. Aucun changement de la bibliothèque.
+
 ## [0.1.0] - 2026-11-13 - Lecture CII, UBL et Factur-X, contrôle des mentions obligatoires
 
 ### Ajouté
@@ -23,6 +30,7 @@ le [versionnage sémantique](https://semver.org/lang/fr/).
 - Exceptions `InvalidDocument` et `InvalidPdf`, avec un message en français, réunies sous `FactureElectroniqueException`.
 - Lecture sûre : XML sans DTD ni entités externes, aucun accès réseau, décompression bornée.
 
+[0.1.1]: https://github.com/polygonlab-ai/facture-electronique-fr-outils/releases/tag/v0.1.1
 [0.1.0]: https://github.com/polygonlab-ai/facture-electronique-fr-outils/releases/tag/v0.1.0
 
 ---

@@ -39,7 +39,9 @@ final class ReadmeTest extends TestCase
         $position = strpos($readme, $block);
         self::assertNotFalse($position, 'exemple absent du README : ' . basename($path));
 
-        self::assertSame(1, preg_match('/```text\n(.*?)\n```/s', $readme, $matches, 0, $position + \strlen($block)), 'sortie absente du README');
+        if (preg_match('/```text\n(.*?)\n```/s', $readme, $matches, 0, $position + \strlen($block)) !== 1) {
+            self::fail('sortie absente du README : ' . basename($path));
+        }
         self::assertSame($matches[1], rtrim(self::execute($path), "\n"));
     }
 
