@@ -22,7 +22,7 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "ext-zlib": "*",
-        "polygonlab/identifiants-entreprise-fr": "^0.1"
+        "polygonlab/identifiants-entreprise-fr": "^0.1 || ^0.2"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.75",
